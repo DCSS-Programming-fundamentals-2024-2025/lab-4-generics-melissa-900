@@ -73,11 +73,6 @@ namespace generics.Entity
             return _students.GetAll();
         }
 
-        public override string ToString()
-        {
-            return string.Join(", ", GetAllStudents().Select(s => $"Id: {s.Id}, Name: {s.Name}"));
-        }
-
         public Student FindStudent(int studentId)
         {
             return _students.Get(studentId);

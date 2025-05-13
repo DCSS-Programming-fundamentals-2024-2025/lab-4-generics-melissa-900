@@ -24,5 +24,9 @@ class Program
         
         IEnumerable<Student> studentsKP41 = KP41.GetAllStudents();
         Console.WriteLine(studentsKP41);
+
+        // 4
+        IReadOnlyRepository<Student,int> studRepo = new InMemoryRepository<Student,int>();
+        IReadOnlyRepository<Person,int>  persRepo = studRepo;  // має компілюватися
     }
 }
